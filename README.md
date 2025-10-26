@@ -35,7 +35,7 @@ Digital_Sector_Intern-1.0-SNAPSHOT.jar
 ### Запустить проект:
 Ввести команду:
 ```
-java -jar target/employee-app-1.0-SNAPSHOT.jar
+java -jar target/Digital_Sector_Intern-1.0-SNAPSHOT.jar
 ```
 Программа выведет список сотрудников в консоль и создаст файл `employees.txt`.
 
