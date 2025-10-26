@@ -9,6 +9,8 @@ import java.util.List;
 
 public class FileService {
 
+
+    //Сохраняет список сотрудников в файл в формате: id, firstName, lastName, salary
     public void saveEmployeesToFile(List<Employee> employees, String filename) throws IOException {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filename, false))) {
             for (Employee employee: employees){
@@ -23,6 +25,11 @@ public class FileService {
         }
     }
 
+
+    /*
+    Загружает список сотрудников из файла. Если файл не найден выбрасывает исключение FileLoadException
+    Если допущена ошибка в строке (неправильная запись), то пропускает ее и пишет об этом в консоль
+    */
     public List<Employee> loadEmployeesFromFile(String filename) throws FileLoadException {
         List<Employee> employees = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))){
